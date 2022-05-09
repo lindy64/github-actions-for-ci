@@ -18,6 +18,8 @@ jobs:
         with:
           name: webpack artifacts
           path: public/
+      - run: ls -al
+      - run: ls -al public
 
   test:
 
@@ -30,6 +32,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - run: ls -al
+    - run: ls -al public
     - uses: actions/download-artifact@main
       with: 
         name: webpack artifacts
